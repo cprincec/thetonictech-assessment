@@ -12,9 +12,9 @@ const Testimonials = () => {
     const [testimonials, setTestimonials] = useState<Testimonial[]>(testimonialsData || []);
 
     const handleNext = () => {
-        let testimonialsCopy = [...testimonials];
+        const testimonialsCopy = [...testimonials];
 
-        let currentTestimonial = testimonialsCopy.pop();
+        const currentTestimonial = testimonialsCopy.pop();
 
         if (currentTestimonial) {
             testimonialsCopy.unshift(currentTestimonial);
@@ -23,9 +23,9 @@ const Testimonials = () => {
     };
 
     const handlePrev = () => {
-        let testimonialsCopy = [...testimonials];
+        const testimonialsCopy = [...testimonials];
 
-        let currentTestimonial = testimonialsCopy.shift();
+        const currentTestimonial = testimonialsCopy.shift();
 
         if (currentTestimonial) {
             testimonialsCopy.push(currentTestimonial);
